@@ -1,0 +1,52 @@
+When teaching programming languages, the choice of language is important.  Some
+teachers opt for using languages tailor-made for teaching. These generally fall
+into two categories: those that are a simplified version of a general-purpose
+language, and those that are completely new languages. One benefit of both
+language categories is that their error messages can be better, for instance by
+never containing references to advanced features that the student has not yet
+been taught. As an example, a Haskell student that writes
+\begin{verbatim}
+x = abs -3
+\end{verbatim}
+is met with a long error message that contains the following snippets:
+\begin{verbatim}
+No instance for (Num a0) arising from
+  a use of ‘abs’
+The type variable ‘a0’ is ambiguous
+\end{verbatim}
+and
+\begin{verbatim}
+No instance for (Num (a0 -> a0)) arising
+  from a use of ‘-’
+In the expression: abs - 3
+\end{verbatim}
+The actual error is that the snippet is interpreted as \texttt{abs - 3}, i.e.
+that the minus sign is taken as subtraction of \texttt{3} from \texttt{abs} and
+not as negation.  However, the error message speaks of \texttt{Num} typeclass
+instances and type variables -- concepts that a beginner Haskell programmer is
+almost guaranteed to not know.
+
+When using a teaching language we can also avoid ``magic incantations''. As an
+example, take the following Java program that prints ``Hello world!'' to the
+console:
+\begin{verbatim}
+public class HelloWorld {
+  public static void
+  main(String[] args) {
+    System.out.println("Hello world!");
+  }
+}
+\end{verbatim}
+To teach what this program does the teacher has to either tell the student to
+not worry about the first three lines for now, probably leaving the student in
+a puzzled state, or hold a long lecture about concepts not entirely relevant to
+a beginner.
+
+Another difficulty in teaching programming is that it is often complicated for
+students to install the programming environment on their own machines. This
+occurs for several reasons, for instance because the language might have bad or
+no support for certain operating systems or simply because the student does not
+yet have enough computer experience. It can also be difficult to provide
+consistent versions of the language implementation and any required libraries.
+These difficulties lead to the teacher having to provide what amounts to technical
+instead of being able to focus only on programming.
