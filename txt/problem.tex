@@ -20,7 +20,7 @@ No instance for (Num (a0 -> a0)) arising
   from a use of ‘-’
 In the expression: abs - 3
 \end{verbatim}
-The actual error is that the snippet is interpreted as \texttt{abs - 3}, i.e.
+The actual error is that the code is interpreted as \texttt{abs - 3}, i.e.
 that the minus sign is taken as subtraction of \texttt{3} from \texttt{abs} and
 not as negation.  However, the error message speaks of \texttt{Num} typeclass
 instances and type variables -- concepts that a beginner Haskell programmer is
