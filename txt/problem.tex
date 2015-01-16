@@ -5,21 +5,21 @@ language, and those that are completely new languages. One benefit of both
 language categories is that their error messages can be better, for instance by
 never containing references to advanced features that the student has not yet
 been taught. As an example, a Haskell student that writes
-\begin{verbatim}
+\begin{lstlisting}[language=Haskell, basicstyle=\footnotesize]
 x = abs -3
-\end{verbatim}
+\end{lstlisting}
 is met with a long error message that contains the following snippets:
-\begin{verbatim}
+\begin{lstlisting}[language=Haskell, basicstyle=\footnotesize]
 No instance for (Num a0) arising from
-  a use of ‘abs’
-The type variable ‘a0’ is ambiguous
-\end{verbatim}
+  a use of 'abs'
+The type variable 'a0' is ambiguous
+\end{lstlisting}
 and
-\begin{verbatim}
+\begin{lstlisting}[language=Haskell, basicstyle=\footnotesize]
 No instance for (Num (a0 -> a0)) arising
-  from a use of ‘-’
+  from a use of '-'
 In the expression: abs - 3
-\end{verbatim}
+\end{lstlisting}
 The actual error is that the code is interpreted as \texttt{abs - 3}, i.e.
 that the minus sign is taken as subtraction of \texttt{3} from \texttt{abs} and
 not as negation.  However, the error message speaks of \texttt{Num} typeclass
@@ -29,14 +29,14 @@ almost guaranteed to not know.
 When using a teaching language we can also avoid ``magic incantations''. As an
 example, take the following Java program that prints ``Hello world!'' to the
 console:
-\begin{verbatim}
+\begin{lstlisting}[language=Java, basicstyle=\footnotesize]
 public class HelloWorld {
   public static void
   main(String[] args) {
     System.out.println("Hello world!");
   }
 }
-\end{verbatim}
+\end{lstlisting}
 To teach what this program does the teacher has to either tell the student to
 not worry about the first three lines for now, probably leaving the student in
 a puzzled state, or hold a long lecture about concepts not entirely relevant to
