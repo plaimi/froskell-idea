@@ -1,4 +1,4 @@
-In this section we look at some existing solutions to the described problem,
+In this section we look at some existing solutions to the described problems,
 and why they are not ideal. Let's start with some of the most popular
 historical languages.
 
@@ -15,9 +15,9 @@ Pascal was designed in 1971, partly as a simplified version of Algol, partly as
 a language that encouraged structured programming. It was designed for
 educational purposes, but evolved into a popular general-purpose programming
 language~\cite{cantu2008essential}. The initial versions were criticised for
-not being suitable for proper programming~\cite{kernighan1981pascal}. Several
-versions and dialects of Pascal have since emerged~\cite{cantu2008essential},
-that eliminate these problems.
+not being suitable for "real world" programming~\cite{kernighan1981pascal}. 
+Several versions and dialects of Pascal have since
+emerged~\cite{cantu2008essential}, that eliminate these problems.
 
 Scheme is a Lisp programming language that was originally designed with
 tutorial purposes in mind~\cite{sussman1998scheme}. It was used in the
@@ -33,7 +33,8 @@ influential language which has seen a lot of adaptation since its
 inception~\cite{logo2011whatislogo}.
 
 Though we have much to learn from the languages mentioned here, none of them
-solve any of the problems we have identified. Furthermore, they are antiquated.
+solve any of the problems we have identified. Furthermore, they are all 
+antiquated.
 
 \subsection{Helium}
 
@@ -50,12 +51,11 @@ Alice is a language and environment designed exclusively to teach the concepts
 of object-oriented programming. It's a drag and drop environment in which the 
 user makes animations by placing 3D models and scripting their behaviour by 
 dragging and dropping control structures (loops, if-statements, and so 
-on)~\cite{alice2015whatisalice}. One of the authors of this paper used Alice 
-at university, and it was largely a negative experience. Alice has multiple 
-shortcomings, including being proprietary, requiring a local install, only 
-vaguely teaching object-oriented concepts and not being even remotely 
-comparable to real life coding, having a thoroughly confusing user interface, 
-and others. Alice falls short on all of our described problems.
+on)~\cite{alice2015whatisalice}. Alice has multiple shortcomings, including 
+being proprietary, requiring a local install, only vaguely teaching 
+object-oriented concepts, not being even remotely comparable to "real world" 
+coding, having a thoroughly confusing user interface, and so forth. Alice 
+falls short on all of our described problems.
 
 \subsection{Mozart}
 Mozart is an implementation of the Oz programming language. It is featured in 
@@ -69,16 +69,18 @@ get started with. It moreover appears to not have received widespread usage.
 \subsection{Racket}
 Racket is another Lisp language. What's cool about Racket is that you may
 enable and disable language features quite freely in the runtime system. This
-lets you make what they call "Teachpacks", libraries written in the full
-language that work with the currently activated subset~\cite{flatt2015racket}.
-In theory you could make a lot of what we are suggesting to do with our
-language with Racket, though we would argue that using a dynamic language that
-permits side-effects is categorically The Wrong Thing. Racket might in any
-event be the most relevant work of all. We should study it closely!
+lets you (amongst other things) make what they call "Teachpacks", libraries 
+written in the full language that work with the currently activated 
+subset~\cite{flatt2015racket}. In theory you could make a lot of what we are 
+suggesting to do with our language with Racket, though we would argue that 
+using a dynamic language that permits side-effects is categorically The Wrong 
+Thing. Racket might in any event be the most relevant work of all. We should 
+study it closely!
 
 Our idea is still a bit better though. We have an online IDE, remember? What 
 is more, we can have nice exercises that guide the user through the learning 
-process in this IDE.
+process in this IDE. And our language doesn't launch missiles by sheer 
+happenchance.
 
 \subsection{Online interactive IDEs not necessarily aimed at teaching}
 There are several online interactive IDEs that we can learn from. They are not 
@@ -102,11 +104,11 @@ hand, and the IDE is mostly pleasant to use.
 \url{http://www.codingame.com/start} offers very visual game programming 
 challenges. Once again there's an online IDE (with emacs and vi input modes), 
 unit tests to guide the user, and in-browser verifying of the user's 
-solutions. The site offers a huge selection of languages, including Haskell, C 
-and Java. Interestingly the huge selection of languages seems to be a negative,
-in that they likely have a very limited API for their challenges, leading to
-all languages feeling slightly awkward in practice. The code you need to write
-is furthermore often far detached from "real world" code.
+solutions. The site offers a huge selection of languages, including Haskell, 
+C, and Java. Interestingly the huge selection of languages seems to be a 
+negative, in that they likely have a very limited API for their challenges, 
+leading to all languages feeling slightly awkward in practice. The code you 
+need to write is furthermore often far detached from "real world" code.
 
 \url{http://www.playmycode.com} lets users hack and play Ruby games, as well as
 share them with others. While testing we encountered bugs in the most popular
@@ -127,11 +129,12 @@ sometime soon.  Note that this is just an online IDE.  There is, however,
 \url{http://share-elm.com/} for sharing elm code, and
 \url{http://elm-lang.org/Examples.elm} has a bunch of elm examples which you
 may open in the online IDE. Despite the elm chaps being clever enough to figure
-out time travel, they don't have emacs or vi bindings for their IDE.  Lacking
-this is of course the nadir of IDE design.
+out time travel, they don't have emacs or vi bindings for their IDE. Lacking
+this is of course the nadir of IDE design. We should learn from the great 
+debugging facilities offered by elm's IDE.
 
 \url{http://www.fpcomplete.com/page/project-build} offers an online IDE for
-Haskell where you can create projects, compile them, and run them. It also
+Haskell where you can make projects, compile them, and run them. It also
 offers the use of libraries, and the IDE features vi and emacs bindings.  It is
 a strong contender that shines with its low barrier to entry. It is, rather
 unfortunately, proprietary, and seems to be aimed at businesses rather than
