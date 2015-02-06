@@ -1,0 +1,46 @@
+Interactive proof editor
+  For doing simple proofs with beta reduction and structural induction.
+  Should work in a point-and-click fashion.
+  Easily prove e.g. `reverse (reverse xs) = xs' using a lemma.
+
+  Example (`xs ++ [] = xs'):
+
+  Goal: xs ++ [] = xs
+  {select `Structural induction', click on xs}
+  Goal 1: [] ++ [] = []
+  Goal 2: x::xs' ++ [] = x::xs'
+  {click `[] ++ []' subterm}
+  Goal 1: [] = [] -- Solved
+  Goal 2: IH: xs' ++ [] = xs'
+         ---------------------
+         x::xs' ++ [] = x::xs'
+  {click `x::xs' ++ []' subterm to reduce it}
+  Goal 1: [] = [] -- Solved
+  Goal 2:  IH: xs' ++ [] = xs'
+         -----------------------
+         x::(xs' ++ []) = x::xs'
+  {select `apply', click on IH, click on `xs' ++ []' subterm}
+  Goal 1: [] = [] -- Solved
+  Goal 2:  IH: xs' ++ [] = xs'
+           -------------------
+            x::xs' = x::xs' -- Solved
+  All solved!
+
+
+Handling libraries when there are unlockable feature sets
+  Let the compiler automatically keep track of the features needed for each
+  export of a library.
+  Then we can automatically create different "views" of a library by filtering
+  out functions that depend on features that are not there yet. Example:
+
+  Features={polymorphism, data, type classes}
+  Data.List(List([], (::)), map, filter, sum, instance Functor List, instance Monad List)
+
+  Features={polymorphism, data}
+  Data.List(List([], (::)), map, filter, sum)
+
+  Features={data}
+  Data.List(List([], (::)), sum) -- or something?
+
+  Features={}
+  Data.List()
